@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <title>Conversor de temperatura</title>
-    
 
     <style>
         body {
@@ -18,8 +17,8 @@
             position: relative;
             top:150px;
             background-image: url('https://www.anzen.co.jp/bussinessnews/images/234a2b3f6e5458c19e41cf4f8a1508b55cae007d.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         h1 {
@@ -74,13 +73,13 @@
     <script>
         function convertToFahrenheit() {
             let celsius = document.getElementById("inputTemp").value;
-            let fahrenheit = (celsius * 9/5) + 32;
+            let fahrenheit = Math.round((celsius * 9/5) + 32);
             document.getElementById("result").innerHTML = "Resultado: " + fahrenheit + "°F";
         }
 
         function convertToCelsius() {
             let fahrenheit = document.getElementById("inputTemp").value;
-            let celsius = (fahrenheit - 32) * 5/9;
+            let celsius = Math.round((fahrenheit - 32) * 5/9);
             document.getElementById("result").innerHTML = "Resultado: " + celsius + "°C";
         }
     </script>
